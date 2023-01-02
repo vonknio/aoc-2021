@@ -67,7 +67,7 @@ locate_two_and_three xs five nine =
     else (last candidates, head candidates)
 
 
--- Returns reordered input, where the first element corresponds to 1, etc.
+-- Returns reordered input, where the first element corresponds to 0, etc.
 create_mapping :: [String] -> [String]
 create_mapping xs = [zero, one, two, three, four, five, six, seven, eight, nine]
   where

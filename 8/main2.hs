@@ -66,7 +66,6 @@ locate_two_and_three xs five nine =
     then (head candidates, last candidates)
     else (last candidates, head candidates)
 
-
 -- Returns reordered input, where the first element corresponds to 0, etc.
 create_mapping :: [String] -> [String]
 create_mapping xs = [zero, one, two, three, four, five, six, seven, eight, nine]
@@ -78,7 +77,6 @@ create_mapping xs = [zero, one, two, three, four, five, six, seven, eight, nine]
     (zero, six, nine) = locate_zero_six_and_nine xs one four
     five = locate_five xs six nine
     (two, three) = locate_two_and_three xs five nine
-
 
 translate_output :: [String] -> [String] -> Int
 translate_output output mapping = (read :: String -> Int) $ concat $ map (\s -> show $ fromJust $ elemIndex s mapping) output
